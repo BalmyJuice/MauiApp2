@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.View.MainPage"
+             BackgroundColor="Black">
+
+    <VerticalStackLayout>
+        <Grid RowSpacing="90">
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0">
+                <Frame BackgroundColor="#282D30" BorderColor="#282D30" CornerRadius="30" >
+                    <Grid  RowSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="4*" />
+                            <RowDefinition Height="3*"/>
+                        </Grid.RowDefinitions>
+
+                        <Image
+                        Source="logo.png"
+                        HeightRequest="130"
+                        Grid.Row="0"
+                        Grid.Column="0"/>
+
+                        <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        TextColor="White"
+                        Margin="50,50,50,50"
+                        HorizontalTextAlignment="Center"
+                        HeightRequest="100">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Black" FontAttributes="Bold" FontFamily="Grenze" FontSize="20"/>
+                                    <Span Text="Rose " FontAttributes="Bold" FontFamily="Grenze" FontSize="20"/>
+                                    <Span Text=" — это прежде всего люди! Это сплочённый коллектив единомышленников, которых объединяет любовь к татуировке." FontFamily="Grenze" FontSize="14" FontAttributes="Bold"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+
+                    </Grid>
+                </Frame>
+            </StackLayout>
+            <StackLayout Grid.Row="1">
+                <Image 
+                    VerticalOptions="Center"
+                    Source="one.png"
+                    HeightRequest="300"
+                    Margin="0,0,0,0"/>
+            </StackLayout>
+        </Grid>
+        
+    </VerticalStackLayout>
+
+</ContentPage>

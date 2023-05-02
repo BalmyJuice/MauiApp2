@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.View.Gallery"
+             xmlns:model="clr-namespace:MauiApp2.Model"
+             xmlns:viewModel="clr-namespace:MauiApp2.ViewModel"
+             x:DataType="viewModel:GalleryViewModel"
+             Title="Все эскизы">
+
+    <ScrollView>
+        <StackLayout>
+            <CollectionView ItemsSource="{Binding Sketch}" SelectionMode="None">
+
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical"
+                         Span="2"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Sketches">
+                        <ImageButton x:Name="mySketch"
+                                     Source="{Binding Image}"
+                                     Aspect="AspectFill"
+                                     HeightRequest="240"
+                                     Margin="10"
+                                     CornerRadius="20"/>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <ActivityIndicator IsVisible="{Binding IsBusy}"
+                               IsRunning="{Binding IsBusy}"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
