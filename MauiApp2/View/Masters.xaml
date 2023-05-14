@@ -2,11 +2,92 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp2.View.Masters"
+     
              Title="Masters">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Frame BackgroundColor="#282D30" HeightRequest="70" Margin="0,0,0,20">
+            <Label Text="Выбрать мастера" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center" FontSize="20"></Label>
+        </Frame>
+        <Frame CornerRadius="20" BackgroundColor="#282D30" WidthRequest="370" HeightRequest="80" Margin="0,0,0,20">
+            <Grid HorizontalOptions="Center" ColumnDefinitions="50,10, 250" >
+                <Image Source="user.png" Grid.Column="0"></Image>
+                <Label Text="Любой свободный мастер" FontAttributes="Bold" TextColor="White" VerticalOptions="Center" FontSize="20" Grid.Column="2"></Label>
+                
+            </Grid>
+        </Frame>
+
+        <!--<CollectionView SelectionMode="None"
+                            ItemsSource=" {Binding Collections}" >
+
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical"
+                         Span="2"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>-->
+            <Frame  CornerRadius="20" BackgroundColor="#282D30" HeightRequest="200" WidthRequest="370">
+            <VerticalStackLayout>
+                <HorizontalStackLayout>
+                    <Frame BackgroundColor="White" CornerRadius="100" HeightRequest="50" WidthRequest="50" VerticalOptions="Start"></Frame>
+                    <Grid ColumnDefinitions="100" RowDefinitions="40,30">
+
+                        <Frame Grid.Column="0" Grid.Row="0" VerticalOptions="Start"  BackgroundColor="#282D30" Padding="0" HasShadow="False" HeightRequest="40">
+                            <Label Margin="20,10" TextColor="White" FontSize="18"  Text="Рома"></Label>
+                        </Frame>
+                        <Frame Grid.Column="1" Grid.Row="1" BackgroundColor="#282D30" Padding="0" VerticalOptions="Start">
+
+                            <Frame BackgroundColor="#282D30" Padding="0" WidthRequest="180" Margin="70,0,0,0">
+                                <HorizontalStackLayout>
+                                    <Image Source="star.png" WidthRequest="20" Margin="5,0,0,0"></Image>
+                                    <Image Source="star.png" WidthRequest="20" Margin="5,0,0,0"></Image>
+                                    <Image Source="star.png" WidthRequest="20" Margin="5,0,0,0"></Image>
+                                    <Image Source="star.png" WidthRequest="20" Margin="5,0,0,0"></Image>
+                                    <Image Source="star.png" WidthRequest="20" Margin="5,0,0,0"></Image>
+                                    <Label Margin="10,0,0,0" TextColor="White" FontFamily="Grenze" FontSize="20" FontAttributes="Italic" Text="206"></Label>
+                                </HorizontalStackLayout>
+                            </Frame>
+                        </Frame>
+                    </Grid>
+                </HorizontalStackLayout>
+                <Frame BackgroundColor="#282D30" Margin="0" HasShadow="False" Padding="0">
+                    <Label FontSize="15" FontAttributes="Bold" Text="Ближайшее время для записи на завтра:"></Label>
+                </Frame>
+
+                <HorizontalStackLayout Margin="0,10">
+                    <Border Stroke="White" StrokeThickness="2" HeightRequest="40" WidthRequest="80" BackgroundColor="#282D30" >
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="20" />
+                        </Border.StrokeShape>
+                        <Label HorizontalOptions="Center" FontFamily="Grenze" FontSize="22" Text="9:40" VerticalOptions="Start" TextColor="White"></Label>
+                    </Border>
+
+                    <Border Stroke="White" StrokeThickness="2" HeightRequest="40" WidthRequest="80" BackgroundColor="#282D30"  >
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="20" />
+                        </Border.StrokeShape>
+                        <Label HorizontalOptions="Center" FontFamily="Grenze" FontSize="22" Text="10:50" VerticalOptions="Start" TextColor="White"></Label>
+                    </Border>
+                    <Border Stroke="White" StrokeThickness="2" HeightRequest="40" WidthRequest="80" BackgroundColor="#282D30"  >
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="20" />
+                        </Border.StrokeShape>
+                        <Label HorizontalOptions="Center" FontFamily="Grenze" FontSize="22" Text="12:30" VerticalOptions="Start" TextColor="White"></Label>
+                    </Border>
+                    <Border Stroke="White" StrokeThickness="2" HeightRequest="40" WidthRequest="80" BackgroundColor="#282D30"  >
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="20" />
+                        </Border.StrokeShape>
+                        <Label HorizontalOptions="Center" FontFamily="Grenze" FontSize="22" Text="17:20" VerticalOptions="Start" TextColor="White"></Label>
+                    </Border>
+
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            </Frame>
+                <!--</DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>-->
+
+
     </VerticalStackLayout>
 </ContentPage>

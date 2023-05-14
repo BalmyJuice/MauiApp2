@@ -1,30 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiApp2.View.Registration"
-             Title="Registration">
-    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="300" Margin="0,0,0,180">
-        <Label Text="Регистрация"
+             x:Class="MauiApp2.View.Authorization"
+             Title="Authorization">
+    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="300" Margin="0,0,0,150">
+        <Label Text="Авторизация"
                FontFamily="Grenze"
                TextColor="White"
                FontSize="28"
                FontAttributes="Bold"
                Margin="0,0,0,40"
                HorizontalOptions="Center"/>
-        <Label Text="Имя профиля"/>
-        <Entry x:Name="Name"
-               MaxLength="16"/>
         <Label Text="Почта"/>
         <Entry x:Name="Email"
                MaxLength="32"/>
-        <Label Text="Возраст"/>
-        <Entry x:Name="Age"
-               MaxLength="2"/>
         <Label Text="Пароль"/>
         <Entry x:Name="Password"
-               MaxLength="16"/>
-        <Label Text="Повтор пароля"/>
-        <Entry x:Name="RPassword"
                MaxLength="16"/>
         <Button Text="Подвердить"
                 TextColor="White"
@@ -33,12 +24,12 @@
                 Clicked="LogIn"
                 BackgroundColor="#7E100F"
                 CornerRadius="10"/>
-        <Label Text="Уже есть аккаунт?"
+        <Label Text="Ещё нет аккаунта?"
                HorizontalOptions="Center"
                Margin="15">
             <Label.GestureRecognizers>
-                <TapGestureRecognizer Tapped="OnAut" />
+                <TapGestureRecognizer Tapped="OnReg" />
             </Label.GestureRecognizers>
-            </Label>
+        </Label>
     </VerticalStackLayout>
 </ContentPage>

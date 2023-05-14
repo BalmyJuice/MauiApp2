@@ -9,6 +9,19 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            <!--<Style TargetType="ContentPage">
+                <Setter Property="AlertDialogStyle">
+                    <Setter.Value>
+                        <Style TargetType="AlertDialog">
+                            <Setter Property="BackgroundColor" Value="White" />
+                            <Setter Property="HasShadow" Value="True" />
+                            <Setter Property="CornerRadius" Value="8" />
+                            <Setter Property="Margin" Value="20" />
+                        </Style>
+                    </Setter.Value>
+                </Setter>
+            </Style>-->
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

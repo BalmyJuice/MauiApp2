@@ -4,7 +4,9 @@
              x:Class="MauiApp2.View.Profile">
     <VerticalStackLayout>
         <StackLayout>
-            <Frame BackgroundColor="#282D30" BorderColor="#282D30" CornerRadius="30">
+            <Frame BackgroundColor="#282D30"
+                   BorderColor="#282D30"
+                   CornerRadius="30">
                 <Grid HeightRequest="300">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
@@ -17,53 +19,62 @@
                         <RowDefinition Height="10*"/>
                         <RowDefinition Height="6*"/>
                     </Grid.RowDefinitions>
-                    <Image Source="log_out.png" HorizontalOptions="Start">
+                    <Image Source="log_out.png"
+                           HorizontalOptions="Start">
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="LogOut" />
                         </Image.GestureRecognizers>
                     </Image>
-                    <Label Text="18 лет" FontFamily="Grenze" Grid.Row="0" HorizontalOptions="End" Grid.ColumnSpan="2"/>
-                    <StackLayout Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="Center">
+                    <Label Text="18 лет"
+                           FontFamily="Grenze"
+                           Grid.Row="0"
+                           HorizontalOptions="End"
+                           Grid.ColumnSpan="2"
+                           x:Name="Age"/>
+                    <StackLayout Grid.Row="1" Grid.ColumnSpan="2"
+                                 HorizontalOptions="Center">
                         <Label Text="Славик Стопарь"
-                       TextColor="White"
-                       FontFamily="Grenze"
-                       FontAttributes="Bold"
-                       Grid.ColumnSpan="2"
-                       FontSize="24"/>
+                               TextColor="White"
+                               FontFamily="Grenze"
+                               FontAttributes="Bold"
+                               Grid.ColumnSpan="2"
+                               FontSize="24"
+                               x:Name="Name"/>
                         <Label Text="с нами с xx.xx.xxxx"
-                           FontFamily="Grenze"/>
+                               FontFamily="Grenze"/>
                     </StackLayout>
                     <ImageButton Source="profile_photo.jpg"
-                             Grid.Row="2"
-                             HeightRequest="130"
-                             WidthRequest="130"
-                             HorizontalOptions="Center"
-                             Grid.ColumnSpan="2"
-                             CornerRadius="65"
-                             Aspect="AspectFill"
-                             Margin="210"/>
+                                 Grid.Row="2"
+                                 HeightRequest="130"
+                                 WidthRequest="130"
+                                 HorizontalOptions="Center"
+                                 Grid.ColumnSpan="2"
+                                 CornerRadius="65"
+                                 Aspect="AspectFill"
+                                 Margin="210"/>
                     <StackLayout Grid.Row="3" Grid.ColumnSpan="2"
-                             HorizontalOptions="Center"
-                             Margin="0,10,0,0">
+                                 HorizontalOptions="Center"
+                                 Margin="0,10,0,0">
                         <HorizontalStackLayout Margin="0,0,0,10">
                             <Image Source="card_number.png"
                                HeightRequest="20"
                                Margin="0,0,20,0"/>
                             <Label Text="31830"
-                               TextColor="White"
-                               FontAttributes="Bold"
-                               FontFamily="Grenze"
-                               FontSize="20"/>
+                                   TextColor="White"
+                                   FontAttributes="Bold"
+                                   FontFamily="Grenze"
+                                   FontSize="20"
+                                   x:Name="Card"/>
                         </HorizontalStackLayout>
                         <HorizontalStackLayout>
                             <Image Source="phone_number.png"
-                               HeightRequest="20"
-                               Margin="0,0,20,0"/>
+                                   HeightRequest="20"
+                                   Margin="0,0,20,0"/>
                             <Label Text="+375 29 xxx-xx-xx"
-                               TextColor="White"
-                               FontAttributes="Bold"
-                               FontFamily="Grenze"
-                               FontSize="20"/>
+                                   TextColor="White"
+                                   FontAttributes="Bold"
+                                   FontFamily="Grenze"
+                                   FontSize="20"/>
                         </HorizontalStackLayout>
                     </StackLayout>
                 </Grid>
@@ -71,8 +82,8 @@
         </StackLayout>
         <StackLayout Margin="0,40,0,0">
             <Frame BackgroundColor="#282D30"
-               BorderColor="#282D30"
-               CornerRadius="30">
+                   BorderColor="#282D30"
+                   CornerRadius="30">
                 <Grid HeightRequest="800">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
@@ -83,44 +94,53 @@
                         <RowDefinition Height="8*"/>
                     </Grid.RowDefinitions>
                     <StackLayout Grid.Row="0">
-                        <Frame
-                            BackgroundColor="#44464F"
-                            BorderColor="#282D30"
-                            CornerRadius="30">
+                        <Frame BackgroundColor="#44464F"
+                               BorderColor="#282D30"
+                               CornerRadius="30">
                             <StackLayout Padding="20,0,0,0">
                                 <HorizontalStackLayout>
-                                    <Ellipse Fill="#7E100F" HeightRequest="20" WidthRequest="20"/>
+                                    <Ellipse Fill="#7E100F"
+                                             HeightRequest="20"
+                                             WidthRequest="20"/>
                                     <Label Text="Сохранённые эскизы"
-                                   TextColor="White"
-                                   FontAttributes="Bold"
-                                   FontFamily="Grenze"
-                                   FontSize="18"
-                                   Margin="20,0,0,0"/>
+                                           TextColor="White"
+                                           FontAttributes="Bold"
+                                           FontFamily="Grenze"
+                                           FontSize="18"
+                                           Margin="20,0,0,0">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnSketches" />
+                                        </Label.GestureRecognizers>
+                                    </Label>
                                 </HorizontalStackLayout>
                                 <HorizontalStackLayout>
-                                    <Ellipse Fill="#7E100F" HeightRequest="20" WidthRequest="20"/>
+                                    <Ellipse Fill="#7E100F"
+                                             HeightRequest="20"
+                                             WidthRequest="20"/>
                                     <Label Text="Сеансы"
-                                   TextColor="White"
-                                   FontAttributes="Bold"
-                                   FontFamily="Grenze"
-                                   FontSize="18"
-                                   Margin="20,10,0,10"/>
+                                           TextColor="White"
+                                           FontAttributes="Bold"
+                                           FontFamily="Grenze"
+                                           FontSize="18"
+                                           Margin="20,10,0,10"/>
                                 </HorizontalStackLayout>
                                 <HorizontalStackLayout>
-                                    <Ellipse Fill="#7E100F" HeightRequest="20" WidthRequest="20"/>
+                                    <Ellipse Fill="#7E100F"
+                                             HeightRequest="20"
+                                             WidthRequest="20"/>
                                     <Label Text="Мастера"
-                                   TextColor="White"
-                                   FontAttributes="Bold"
-                                   FontFamily="Grenze"
-                                   FontSize="18"
-                                   Margin="20,0,0,0"/>
+                                           TextColor="White"
+                                           FontAttributes="Bold"
+                                           FontFamily="Grenze"
+                                           FontSize="18"
+                                           Margin="20,0,0,0"/>
                                 </HorizontalStackLayout>
                             </StackLayout>
                         </Frame>
                     </StackLayout>
                     <StackLayout Grid.Row="1">
                         <Image Source="logo.png"
-                           HeightRequest="160"/>
+                               HeightRequest="160"/>
                     </StackLayout>
                 </Grid>
             </Frame>

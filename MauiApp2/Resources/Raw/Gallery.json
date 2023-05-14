@@ -272,5 +272,10 @@
   {
     "Id": 55,
     "Image": "tattoo_55.png"
+  },
+
+  {
+    "Id": 56,
+    "Image": "tattoo_56.png"
   }
 ]
